@@ -19,7 +19,8 @@ function decrementNumber() {
 
 function displayNumber() {
     document.querySelector("#number").textContent = number;
-    document.querySelector("#message").textContent = `The number is now: ${number}`;
+    document.querySelector("#message").textContent = `The number is: ${number}`;
+    // document.querySelector("#message").textContent = "The number is:" + number;
 }
 
 // ========== Event Listeners ========== //
