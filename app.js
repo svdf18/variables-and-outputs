@@ -1,24 +1,27 @@
 "use strict";
 
+// ========== Variables ========== //
 let number = 0;
 
-function increment() {
-    console.log(number);
+// ========== Event Functions ========== //
+
+function incrementNumber() {
     number = number + 1;
     displayNumber();
-    document.querySelector("#message").textContent = "You incremented the number 🎉 The number is now: " + number;
 }
 
-function decrement() {
-    console.log(number);
+function decrementNumber() {
     number = number - 1;
     displayNumber();
-    document.querySelector("#message").textContent = `You decremented the number 💁🏼‍♂️ The number is now: ${number}`;
 }
+
+// ========== Display Functions ========== //
 
 function displayNumber() {
     document.querySelector("#number").textContent = number;
+    document.querySelector("#message").textContent = `The number is now: ${number}`;
 }
 
-document.querySelector("#btn-increment").addEventListener("click", increment);
-document.querySelector("#btn-decrement").addEventListener("click", decrement);
+// ========== Event Listeners ========== //
+document.querySelector("#btn-increment").addEventListener("click", incrementNumber);
+document.querySelector("#btn-decrement").addEventListener("click", decrementNumber);
